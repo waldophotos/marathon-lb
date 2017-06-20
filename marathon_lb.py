@@ -109,7 +109,7 @@ class MarathonService(object):
         self.useHsts = False
         self.sslCert = None
         self.bindOptions = None
-        self.bindAddr = '*'
+        self.bindAddr = '::'
         self.groups = frozenset()
         self.mode = None
         self.balance = 'roundrobin'

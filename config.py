@@ -166,7 +166,7 @@ include your certificate.
             ConfigTemplate(name='FRONTEND_HEAD',
                            value='''
 frontend {backend}
-  bind {bindAddr}:{servicePort}{sslCert}{bindOptions}
+  bind {bindAddr}:{servicePort}{sslCert}{bindOptions} v4v6
   mode {mode}
 ''',
                            overridable=True,
