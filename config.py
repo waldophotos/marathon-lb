@@ -132,7 +132,7 @@ all virtual hosts as defined by the `HAPROXY_{n}_VHOST` label.
             ConfigTemplate(name='HTTP_FRONTEND_APPID_HEAD',
                            value='''
 frontend marathon_http_appid_in
-  bind *:9091
+  bind :::9091 v4v6
   mode http
 ''',
                            overridable=False,
@@ -151,7 +151,7 @@ supported. Only the first HTTP port is available via this frontend.
             ConfigTemplate(name='HTTPS_FRONTEND_HEAD',
                            value='''
 frontend marathon_https_in
-  bind *:443 ssl {sslCerts}
+  bind :::443 ssl {sslCerts} v4v6
   mode http
 ''',
                            overridable=False,
