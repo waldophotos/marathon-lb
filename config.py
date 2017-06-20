@@ -119,7 +119,7 @@ The userlist for basic HTTP auth.
             ConfigTemplate(name='HTTP_FRONTEND_HEAD',
                            value='''
 frontend marathon_http_in
-  bind *:80
+  bind :::80 v4v6
   mode http
 ''',
                            overridable=False,
